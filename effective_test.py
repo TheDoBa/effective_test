@@ -151,9 +151,9 @@ class TransactionManager:
                 expenses += transaction.amount
         balance = income - expenses
 
-        print(f"Баланс: {balance}")
-        print(f"Доходы: {income}")
-        print(f"Расходы: {expenses}")
+        print(f"Баланс: {balance}"
+              f"\nДоходы: {income}"
+              f"\nРасходы: {expenses}")
 
     def add_transaction(self):
         """
@@ -240,11 +240,13 @@ class TransactionManager:
         """
         while True:
             try:
-                print("Выберите критерий поиска:")
-                print("1. По категории")
-                print("2. По дате")
-                print("3. По сумме")
-                print("Cntrl+C. Для выхода в главное меню.")
+                print("\n".join([
+                    "Выберите критерий поиска:",
+                    "1. По категории",
+                    "2. По дате",
+                    "3. По сумме",
+                    "Cntrl+C. Для выхода в главное меню."
+                ]))
                 choice = int(input("Выберите действие: "))
 
                 if choice == 1:
@@ -342,13 +344,15 @@ class TransactionManager:
         Запуск меню.
         """
         while True:
-            print("Меню:")
-            print("-----------------")
-            print("1. Показать баланс")
-            print("2. Добавить запись")
-            print("3. Редактировать запись")
-            print("4. Поиск записи")
-            print("5. Выход")
+            print("\n".join([
+                "Меню:",
+                "-----------------",
+                "1. Показать баланс",
+                "2. Добавить запись",
+                "3. Редактировать запись",
+                "4. Поиск записи",
+                "5. Выход"
+            ]))
 
             choice = input("Выберите действие: ")
 
